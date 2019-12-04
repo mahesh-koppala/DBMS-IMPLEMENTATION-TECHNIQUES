@@ -1,0 +1,529 @@
+pre defined period that is taken here is 2006-2010
+
+
+top 5 movies in action and thriller
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Action%' AND GENRES LIKE '%Thriller%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+Call of Duty 4: Modern Warfare           9.1                                                                                                                                                                                                                                                                                                                  
+Home Sweet Home                          9.1                                                                                                                                                                                                                                                                                                                  
+The Dark Knight                            9                                                                                                                                                                                                                                                                                                                  
+End of the Tour                            9                                                                                                                                                                                                                                                                                                                  
+Play 16                                    9                                                                                                                                                                                                                                                                                                                  
+
+
+bottom 5 movies in action and thriller
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Action%' AND GENRES LIKE '%Thriller%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+Desh Drohi                               1.6                                                                                                                                                                                                                                                                                                                  
+Transmorphers                            1.7                                                                                                                                                                                                                                                                                                                  
+Born Into Mafia                          1.8                                                                                                                                                                                                                                                                                                                  
+Monster                                  2.1                                                                                                                                                                                                                                                                                                                  
+300 Killers                              2.1                                                                                                                                                                                                                                                                                                                  
+
+
+top 5 movies in sci-fi and adventure
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Adventure%' AND GENRES LIKE '%Sci-Fi%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+Western Time Warp                        9.7                                                                                                                                                                                                                                                                                                                  
+Mass Effect 2                            9.6                                                                                                                                                                                                                                                                                                                  
+Mary Wollstonecraft of Sector            9.4                                                                                                                                                                                                                                                                                                                  
+Seventeen                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                              
+Fallout 3                                9.2                                                                                                                                                                                                                                                                                                                  
+Portal                                   9.2                                                                                                                                                                                                                                                                                                                  
+
+
+
+bottom 5 movies in sci-fi and adventure
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Adventure%' AND GENRES LIKE '%Sci-Fi%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+The Black Knight Returns                 1.5                                                                                                                                                                                                                                                                                                                  
+The Apocalypse                           1.8                                                                                                                                                                                                                                                                                                                  
+Metal Man                                1.8                                                                                                                                                                                                                                                                                                                  
+War of the Worlds 2: The Next            2.1                                                                                                                                                                                                                                                                                                                  
+Wave                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                              
+Savage Planet                            2.3                                                                                                                                                                                                                                                                                                                  
+
+
+
+top 5 movies in comedy and romance
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Comedy%' AND GENRES LIKE '%Romance%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+Episode dated 14 June 2007                10                                                                                                                                                                                                                                                                                                                  
+Phan                                      10                                                                                                                                                                                                                                                                                                                  
+Year 1: 2009                              10                                                                                                                                                                                                                                                                                                                  
+Hands Off                                 10                                                                                                                                                                                                                                                                                                                  
+Episode #1.1                              10                                                                                                                                                                                                                                                                                                                  
+
+
+
+bottom 5 movies in comedy and romance
+SQL> SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Comedy%' AND GENRES LIKE '%Romance%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+PRIMARYTITLE                   AVERAGERATING                                                                                                                                                                                                                                                                                                                  
+------------------------------ -------------                                                                                                                                                                                                                                                                                                                  
+One Night: Choice of Evil                  1                                                                                                                                                                                                                                                                                                                  
+Black Love                               1.4                                                                                                                                                                                                                                                                                                                  
+Maple Palm                               1.5                                                                                                                                                                                                                                                                                                                  
+Flirt                                    1.5                                                                                                                                                                                                                                                                                                                  
+Just Another Romantic Wrestlin           1.6                                                                                                                                                                                                                                                                                                                  
+g Comedy                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                              
+
+
+query plan generation for the query "top 5 movies in action and thriller"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Action%' AND GENRES LIKE '%Thriller%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Action%' AND "GENRES" LIKE U'%Thriller%' AND     
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+
+
+
+query plan generation for the query "bottom 5 movies in action and thriller"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Action%' AND GENRES LIKE '%Thriller%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Action%' AND "GENRES" LIKE U'%Thriller%' AND     
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+
+
+
+query plan generation for the query "top 5 movies in sci-fi and adventure"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Adventure%' AND GENRES LIKE '%Sci-Fi%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Adventure%' AND "GENRES" LIKE U'%Sci-Fi%' AND    
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+
+
+
+query plan generation for the query "bottom 5 movies in sci-fi and adventure"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Adventure%' AND GENRES LIKE '%Sci-Fi%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Adventure%' AND "GENRES" LIKE U'%Sci-Fi%' AND    
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+
+
+
+
+query plan generation for the query "top 5 movies in comedy and romance"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Comedy%' AND GENRES LIKE '%Romance%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING DESC) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Comedy%' AND "GENRES" LIKE U'%Romance%' AND      
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+
+
+
+
+query plan generation for the query "bottom 5 movies in comedy and romance"
+SQL> EXPLAIN PLAN FOR SELECT * FROM (SELECT PRIMARYTITLE,AVERAGERATING FROM TITLE_BASICS,TITLE_RATINGS WHERE TITLE_BASICS.TCONST=TITLE_RATINGS.TCONST AND GENRES LIKE '%Comedy%' AND GENRES LIKE '%Romance%' AND STARTYEAR BETWEEN '2006' AND '2010' ORDER BY AVERAGERATING) WHERE ROWNUM <=5;
+
+Explained.
+
+SQL> SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+Plan hash value: 1778606715                                                     
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+| Id  | Operation               | Name          | Rows  | Bytes | Cost (%CPU)| T
+ime     |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |               |     5 |  4825 | 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  1 |  COUNT STOPKEY          |               |       |       |            |  
+        |                                                                       
+                                                                                
+|   2 |   VIEW                  |               |  1993 |  1878K| 27855   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  3 |    SORT ORDER BY STOPKEY|               |  1993 |   181K| 27855   (1)| 0
+0:00:02 |                                                                       
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+                                                                                
+|*  4 |     HASH JOIN           |               |  1993 |   181K| 27854   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|*  5 |      TABLE ACCESS FULL  | TITLE_BASICS  |  1983 |   152K| 27160   (1)| 0
+0:00:02 |                                                                       
+                                                                                
+|   6 |      TABLE ACCESS FULL  | TITLE_RATINGS |   805K|    10M|   690   (2)| 0
+0:00:01 |                                                                       
+                                                                                
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+---------                                                                       
+                                                                                
+                                                                                
+Predicate Information (identified by operation id):                             
+---------------------------------------------------                             
+                                                                                
+   1 - filter(ROWNUM<=5)                                                        
+   3 - filter(ROWNUM<=5)                                                        
+   4 - access("TITLE_BASICS"."TCONST"="TITLE_RATINGS"."TCONST")                 
+   5 - filter("GENRES" LIKE U'%Comedy%' AND "GENRES" LIKE U'%Romance%' AND      
+              "STARTYEAR"<='2010' AND "STARTYEAR">='2006' AND "GENRES" IS NOT NU
+
+PLAN_TABLE_OUTPUT                                                               
+--------------------------------------------------------------------------------
+LL AND                                                                          
+                                                                                
+              "GENRES" IS NOT NULL)                                             
+
+23 rows selected.
+
+SQL> spool off
+
